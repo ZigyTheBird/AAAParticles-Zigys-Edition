@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "aaa_particles",
+  "id": "zigys_particles",
   "version": "${version}",
 
-  "name": "AAAParticles",
+  "name": "AAA Particles (Zigy's Edition)",
   "description": "",
   "authors": [],
   "contact": {},
@@ -14,10 +14,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "mod.chloeprime.aaaparticles.fabric.AAAParticlesFabric"
+      "com.zigythebird.zigys_particles.fabric.AAAParticlesFabric"
     ],
     "client": [
-      "mod.chloeprime.aaaparticles.fabric.AAAParticlesFabricClient"
+      "com.zigythebird.zigys_particles.fabric.AAAParticlesFabricClient"
     ]
   },
   "mixins": [
@@ -25,7 +25,8 @@
     "aaa_particles-common.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.15.7",
-    "minecraft": ">=1.20.1"
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": ">=${fabric_api_version}",
+    "minecraft": ">=${minecraft_version}"
   }
 }

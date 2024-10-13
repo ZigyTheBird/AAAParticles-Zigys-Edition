@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.zigythebird.zigys_particles.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "MixinResourceLocation"
+  ],
+  "client": [
+    "client.GameRendererAccessor",
+    "client.MixinGameRenderer",
+    "client.MixinItemInHandRenderer",
+    "client.MixinLevelRenderer",
+    "client.MixinMinecraft"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

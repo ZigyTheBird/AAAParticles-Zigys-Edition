@@ -1,29 +1,12 @@
 architectury {
-    common(rootProject.enabled_platforms.split(","))
+    common("fabric", "neoforge")
 }
 
 dependencies {
-    // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
-    // Do NOT use other classes from fabric loader
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
-    compileOnly "maven.modrinth:iris:1.6.17+1.20.1"
-    // Remove the next line if you don't want to depend on the API
-    modApi "dev.architectury:architectury:${rootProject.architectury_version}"
-    // Forge Config API
-    modApi "fuzs.forgeconfigapiport:forgeconfigapiport-common:${rootProject.forge_config_api_version}"
-    modImplementation "dev.latvian.mods:kubejs:$kubejs_version"
-}
 
-publishing {
-    publications {
-        mavenCommon(MavenPublication) {
-            artifactId = rootProject.archives_base_name
-            from components.java
-        }
-    }
+    compileOnly "maven.modrinth:iris:u9KvDA4s"
 
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
-    }
+    modImplementation "com.zigythebird.multiloaderutils:zigysmultiloaderutils-common-$rootProject.minecraft_version:$rootProject.multiloader_utils_version"
+    include "com.zigythebird.multiloaderutils:zigysmultiloaderutils-common-$rootProject.minecraft_version:$rootProject.multiloader_utils_version"
 }

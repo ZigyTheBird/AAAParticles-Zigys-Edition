@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+
+license="MIT"
+
+[[mods]]
+
+modId="zigys_particles"
+
+version="${mod_version}"
+
+displayName="AAA Particles (Zigy's Edition)"
+
+authors="ZigyTheBird, ChloePrime"
+
+description='''Fork of ChloePrime's AAA Particles for use in my mods.'''
+
+[[mixins]]
+config="zigys_particles.mixins.json"
+
+[[dependencies.zigys_particles]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.0.0-beta,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.zigys_particles]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21,)"
+    ordering="NONE"
+    side="BOTH"
