@@ -1,6 +1,6 @@
 package com.zigythebird.zigys_particles.api.client.effekseer;
 
-import com.zigythebird.zigys_particles.Effekseer.swig.EffekseerBackendCore;
+import Effekseer.swig.EffekseerBackendCore;
 import com.zigythebird.zigys_particles.common.util.Helpers;
 
 /**

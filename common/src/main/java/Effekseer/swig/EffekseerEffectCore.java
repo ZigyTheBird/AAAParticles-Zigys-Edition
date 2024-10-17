@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package com.zigythebird.zigys_particles.Effekseer.swig;
+package Effekseer.swig;
 
 public class EffekseerEffectCore {
   private transient long swigCPtr;

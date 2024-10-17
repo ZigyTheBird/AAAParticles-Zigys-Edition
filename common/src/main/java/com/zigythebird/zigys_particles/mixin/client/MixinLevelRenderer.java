@@ -27,7 +27,7 @@ public class MixinLevelRenderer {
         var capturedPose = capture.pose.last();
         capturedPose.pose().set(currentPose.pose());
         capturedPose.normal().set(currentPose.normal());
-        capture.projection.set(matrix4f);
+        capture.projection.set(matrix4f2);
         capture.camera = camera;
         capture.hasCapture = true;
 

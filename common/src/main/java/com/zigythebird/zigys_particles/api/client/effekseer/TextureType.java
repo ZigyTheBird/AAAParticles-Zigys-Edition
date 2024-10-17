@@ -1,6 +1,6 @@
 package com.zigythebird.zigys_particles.api.client.effekseer;
 
-import com.zigythebird.zigys_particles.Effekseer.swig.EffekseerTextureType;
+import Effekseer.swig.EffekseerTextureType;
 
 @SuppressWarnings("unused")
 public enum TextureType {

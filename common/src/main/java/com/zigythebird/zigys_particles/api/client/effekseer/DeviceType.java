@@ -1,6 +1,6 @@
 package com.zigythebird.zigys_particles.api.client.effekseer;
 
-import com.zigythebird.zigys_particles.Effekseer.swig.EffekseerCoreDeviceType;
+import Effekseer.swig.EffekseerCoreDeviceType;
 
 public enum DeviceType {
     UNKNOWN(EffekseerCoreDeviceType.Unknown),

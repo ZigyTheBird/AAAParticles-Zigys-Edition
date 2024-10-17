@@ -7,7 +7,6 @@
     "MixinResourceLocation"
   ],
   "client": [
-    "client.GameRendererAccessor",
     "client.MixinGameRenderer",
     "client.MixinItemInHandRenderer",
     "client.MixinLevelRenderer",

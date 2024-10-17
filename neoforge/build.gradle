@@ -52,7 +52,7 @@ jar {
     archiveClassifier.set("dev")
     manifest {
         attributes([
-                "MixinConfigs": "aaa_particles-common.mixins.json,aaa_particles.mixins.json"
+                "MixinConfigs": "zigys_particles-common.mixins.json"
         ])
     }
 }

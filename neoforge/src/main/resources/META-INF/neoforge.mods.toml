@@ -16,7 +16,7 @@ authors="ZigyTheBird, ChloePrime"
 description='''Fork of ChloePrime's AAA Particles for use in my mods.'''
 
 [[mixins]]
-config="zigys_particles.mixins.json"
+config="zigys_particles-common.mixins.json"
 
 [[dependencies.zigys_particles]]
     modId="neoforge"

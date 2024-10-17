@@ -1,6 +1,6 @@
 package com.zigythebird.zigys_particles.api.client.effekseer;
 
-import com.zigythebird.zigys_particles.Effekseer.swig.EffekseerManagerCore;
+import Effekseer.swig.EffekseerManagerCore;
 import com.zigythebird.zigys_particles.common.util.Helpers;
 import org.joml.Matrix4f;
 

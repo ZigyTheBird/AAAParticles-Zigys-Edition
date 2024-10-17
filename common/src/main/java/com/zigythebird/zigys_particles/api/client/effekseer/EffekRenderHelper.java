@@ -7,7 +7,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix4f;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class EffekRenderHelper {
@@ -93,22 +95,35 @@ public class EffekRenderHelper {
     }
 
     public static void deleteInactiveEffeks() {
+        List<Object> objectsMarkedForRemoval = new ArrayList<>();
         for (Map.Entry<Object, Map<ResourceLocation, ClientEffek>> entry : OBJECT_EFFEKS.entrySet()) {
+            List<ResourceLocation> effeksMarkedForRemoval = new ArrayList<>();
             for (Map.Entry<ResourceLocation, ClientEffek> entry1 : entry.getValue().entrySet()) {
                 if (!entry1.getValue().wasUsed() && entry1.getValue().shouldDestroyIfInactive) {
                     entry1.getValue().emitter.stop();
-                    entry.getValue().remove(entry1.getKey());
+                    effeksMarkedForRemoval.add(entry1.getKey());
                     if (entry.getValue().isEmpty()) {
-                        OBJECT_EFFEKS.remove(entry.getKey());
+                        objectsMarkedForRemoval.add(entry.getKey());
                     }
                 }
             }
+            for (ResourceLocation id : effeksMarkedForRemoval) {
+                entry.getValue().remove(id);
+            }
         }
+        for (Object object : objectsMarkedForRemoval) {
+            OBJECT_EFFEKS.remove(object);
+        }
+
+        List<ResourceLocation> effeksMarkedForRemoval = new ArrayList<>();
         for (Map.Entry<ResourceLocation, ClientEffek> entry1 : EFFEKS.entrySet()) {
             if (!entry1.getValue().wasUsed() && entry1.getValue().shouldDestroyIfInactive) {
                 entry1.getValue().emitter.stop();
-                EFFEKS.remove(entry1.getKey());
+                effeksMarkedForRemoval.add(entry1.getKey());
             }
+        }
+        for (ResourceLocation id : effeksMarkedForRemoval) {
+            EFFEKS.remove(id);
         }
     }
 }
